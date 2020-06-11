@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Example</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Tic-Tac-Toe</h1>
+
+      <form id="sign-up" class="border">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="email" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+          <input type="submit" value="Sign in!">
+        </fieldset>
+      </form>
+
+      <form id="sign-in" class="border">
+        <fieldset>
+          <legend>Sign in!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign in!">
+        </fieldset>
+      </form>
+
+      <form id="sign-out" class="border">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" value="Sign out!">
+        </fieldset>
+      </form>
+
+      <form id="change-password" class="border">
+        <fieldset>
+          <legend>password</legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password!">
+        </fieldset>
+      </form>
+      <form id='play-game'> 
+        <button type='submit'>Play Game</button> 
+      </form> 
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-6 content">
+          <div class="container-fluid tic-container">
+            <div class="row tic-row">
+              <div class="col-4 tic-box"> 1 </div>
+              <div class="col-4 tic-box"> 2 </div>
+              <div class="col-4 tic-box"> 3 </div>
+            </div>
+            <div class="row tic-row">
+              <div class="col-4 tic-box"> 4 </div>
+              <div class="col-4 tic-box"> 5 </div>
+              <div class="col-4 tic-box"> 6 </div>
+            </div>
+            <div class="row tic-row">
+              <div class="col-4 tic-box"> 7 </div>
+              <div class="col-4 tic-box"> 8 </div>
+              <div class="col-4 tic-box"> 9 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form id="new-game">
+      <button type="submit">NEW GAME</button>
+    </form>
+  </body>
+</html>
