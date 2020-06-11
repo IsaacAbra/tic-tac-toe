@@ -3,15 +3,15 @@
 const config = require('../config')
 const store = require('../store')
 
-const signUp = function (formData) {
+const signUp = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: {
       credentials: {
-        email: formData.credentials.email,
-        password: formData.credentials.password,
-        password_confirmation: formData.credentials.password_confirmation
+        email: data.credentials.email,
+        password: data.credentials.password,
+        password_confirmation: data.credentials.password_confirmation
       }
     }
   })
@@ -22,20 +22,9 @@ const signIn = function (data) {
     url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: {
-      email: formData.credential.email,
-      password: formData.credentials.password
+      email: data.credential.email,
+      password: data.credentials.password
     }
-  })
-}
-
-const createGame = function (response) { 
-  return $.ajax({
-     url: config.apiUrl + '/games', 
-    method: 'POST',
-    headers: { 
-      Authorization: 'Token token=' + store.user.token 
-    }, 
-    data: {} 
   })
 }
 
@@ -59,16 +48,10 @@ const changePassword = function (data) {
     },
     data: {
       passwords: {
-        old: formData.passwords.old,
-        new: formData.passwords.new,
+        old: data.passwords.old,
+        new: data.passwords.new
       }
     }
-  })
-}
-
-const onUpdateGame = function (data) {
-  return $.ajax({
-    url: config.apiUrl
   })
 }
 

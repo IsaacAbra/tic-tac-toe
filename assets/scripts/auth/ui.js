@@ -1,23 +1,12 @@
 const store = require('../store')
 
-const onCreateGameSuccess = (response) => { 
-  $('#message').text('New game created. Start playing!') 
-  $('.row').show() 
-  $('#new-game').show() 
-  store.game = response.game 
-}
-
-const onCreateGameFailure = (response) => {
-  $('#message').text('Unable to create a new game.')
- }
-
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
 }
 
-const signUpFailure = function (error) {
+const signUpFailure = function () {
   $('#message').text('Signing up did not work')
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -27,8 +16,6 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  store.user = reponse.user
-  $('#message')
 }
 
 const signInFailure = function () {
@@ -42,7 +29,6 @@ const signOutSuccess = function (response) {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
-  store.user = null
 }
 
 const signOutFailure = function () {

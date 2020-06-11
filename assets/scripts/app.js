@@ -2,22 +2,14 @@
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
-const authEvents = require('./auth/events.js')
+const events = require('./auth/events')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
 $(() => {
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#sign-out').on('submit', authEvents.onSignOut)
-  $('#change-password')
-  $('.row').hide()
-  $('#new-game').hide()
-  $('#play-game').on('submit',gamesEvents.onCreateGame)
-  $('.box').on('click', function () { $(this).slideUp()
+  // your JS code goes here
+  $('#sign-up').on('submit', events.onSignUp)
+  $('#sign-in').on('submit', events.onSignIn)
+  $('#change-password').on('submit', events.onChangePassword)
+  $('#sign-out').on('submit', events.onSignOut)
 })
-
-module.exports = {
-  authEvents
-}
