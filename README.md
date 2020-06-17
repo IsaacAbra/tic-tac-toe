@@ -17,4 +17,4 @@ As a user, I'd like to be able to log-out and log back in freely and change my p
 ---
 # Wireframe
 ---
-![Imgur](https://imgur.com/NZgTkN7)
+![Imgur](https://i.imgur.com/NZgTkN7.jpg)
