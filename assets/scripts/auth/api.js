@@ -22,16 +22,18 @@ const signIn = function (data) {
     url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: {
-      email: data.credential.email,
-      password: data.credentials.password
+      credentials: {
+        email: data.credentials.email,
+        password: data.credentials.password
+      }
     }
   })
 }
 
 const signOut = function () {
   return $.ajax({
-    url: config.apiUrl + '/sign-out',
     method: 'DELETE',
+    url: config.apiUrl + '/sign-out',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
@@ -39,7 +41,6 @@ const signOut = function () {
 }
 
 const changePassword = function (data) {
-  console.log('data is ', data)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -55,9 +56,24 @@ const changePassword = function (data) {
   })
 }
 
+const createGame = (data) => {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    passwords: {
+      old: data.passwords.old,
+      new: data.passwords.new
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword
+  changePassword,
+  createGame
 }

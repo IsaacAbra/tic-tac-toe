@@ -15,73 +15,69 @@
     </head>
     <body>
       <h1>Tic-Tac-Toe</h1>
-    <div>
-      <p id="message"></p>
-    </div>
 
       <form id="sign-up" class="border">
-
+        <fieldset>
           <legend>Sign up!</legend>
           <input type="email" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-          <input type="submit" value="Sign up!">
-
+          <input type="submit" value="Sign in!">
+        </fieldset>
       </form>
 
       <form id="sign-in" class="border">
-
+        <fieldset>
           <legend>Sign in!</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="submit" value="Sign in!">
-
+        </fieldset>
       </form>
 
       <form id="sign-out" class="border">
-        <div class=hide-sign-out>
+        <fieldset>
           <legend>Sign Out!</legend>
           <input type="submit" value="Sign out!">
-        </div>
+        </fieldset>
       </form>
+
       <form id="change-password" class="border">
-        <div class="hide-change-password">
+        <fieldset>
           <legend>password</legend>
-            <input type="password" name="passwords[old]" placeholder="Old Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
-            <input type="submit" value="Change Password!">
-        </div>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password!">
+        </fieldset>
       </form>
       <form id='play-game'> 
         <button type='submit'>Play Game</button> 
       </form> 
       <div class="container-fluid">
-           <div class="row">
-             <div class="col-12 col-sm-6 content">
-               <div class="container-fluid tic-container">
-                 <div class="row tic-row">
-                   <div class="col-4 tic-box"> 1 </div>
-                   <div class="col-4 tic-box"> 2 </div>
-                   <div class="col-4 tic-box"> 3 </div>
-                 </div>
-                 <div class="row tic-row">
-                   <div class="col-4 tic-box"> 4 </div>
-                   <div class="col-4 tic-box"> 5 </div>
-                   <div class="col-4 tic-box"> 6 </div>
-                 </div>
-                 <div class="row tic-row">
-                   <div class="col-4 tic-box"> 7 </div>
-                   <div class="col-4 tic-box"> 8 </div>
-                   <div class="col-4 tic-box"> 9 </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-      <form id="new-game">
-        <div class="hide-newgame-button">
-          <button type="submit">NEW GAME</button>
+      <div class="row">
+        <div class="col-12 col-sm-6 content">
+          <div class="container-fluid tic-container">
+            <div class="row tic-row">
+              <div class="col-4 tic-box"> 1 </div>
+              <div class="col-4 tic-box"> 2 </div>
+              <div class="col-4 tic-box"> 3 </div>
+            </div>
+            <div class="row tic-row">
+              <div class="col-4 tic-box"> 4 </div>
+              <div class="col-4 tic-box"> 5 </div>
+              <div class="col-4 tic-box"> 6 </div>
+            </div>
+            <div class="row tic-row">
+              <div class="col-4 tic-box"> 7 </div>
+              <div class="col-4 tic-box"> 8 </div>
+              <div class="col-4 tic-box"> 9 </div>
+            </div>
+          </div>
         </div>
-      </form>
-    </body>
+      </div>
+    </div>
+    <form id="new-game">
+      <button type="submit">NEW GAME</button>
+    </form>
+  </body>
 </html>

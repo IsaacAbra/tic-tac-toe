@@ -1,4 +1,4 @@
-### Everything you need to know about my Tic-Tac-Toe
+## Everything you need to know about my Tic-Tac-Toe
 ---
 ## User-Story
 ---
